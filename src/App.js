@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import UseStateArray from './tutorial/useStateArray';
+import UseEffect from './tutorial/useEffect';
+
 function App() {
   return (
     <div className='container'>
-      <h2>Advanced Tutorial</h2>
+      <UseEffect/>
     </div>
   )
 }
