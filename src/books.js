@@ -48,5 +48,10 @@ export let books = [
         image: "https://images-na.ssl-images-amazon.com/images/I/51f-G2GQwBL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
         author: "Will Smith",
         title: "Will"
+    },
+    {
+        image: "https://images-na.ssl-images-amazon.com/images/I/71v1AwhuRbL._AC_UL200_SR200,200_.jpg",
+        author: "You Fucking Got This : Motivational Swear Words Coloring Book: Swear Word Colouring Books for Adults: Swearing Colouring Book Pages for Stress Relief ... Funny Journals and Adult Coloring Books)",
+        title:  "Bridget Coloring Press"
     }
 ];
