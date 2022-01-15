@@ -6,7 +6,7 @@ import {Book} from './Book';
 import {books} from './books';
 import JoditEditor from './jodit_example';
 import TinymceEditor from './tinymce_example';
-import QuillEditor from './quil_example';
+import QuillEditor from './quill_example';
 
 function BookList(){
     return (
