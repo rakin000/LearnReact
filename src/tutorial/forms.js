@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import { useEffect } from 'react/cjs/react.development';
 
+let global_cnt = 0;
 const ControlledInput = () => {
-    const [person,setPerson] = useState({firstName: '', lastName: '', email: '', age: ''});
+    const [person,setPerson] = useState({id: '',firstName: '', lastName: '', email: '', age: ''});
     const [people,setPeople] = useState([]);
-
+    
     function handleChange(e) {
         const name = e.target.name;
         const value = e.target.value;
@@ -14,9 +14,12 @@ const ControlledInput = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if( person.firstName && person.lastName && person.email && person.age ){
-            const newpeople = [...people, person];
+            const newPerson = {...person, id: global_cnt};
+            global_cnt = global_cnt+1;
+            console.log(global_cnt);
+            const newpeople = [...people, newPerson];
             setPeople(newpeople);
-            setPerson('','','','');
+            setPerson({id:'',firstName:'',lastName:'',email:'',age:''});
         }
         console.log("form submitted");
     }
@@ -47,6 +50,11 @@ const ControlledInput = () => {
                     <h4>{person.firstName} {person.lastName}</h4>
                     <p>{person.age}</p>
                     <p>{person.email}</p>
+                    <buton className='btn' onClick={() => {
+                        const newPeople = people.filter((p) => p.id !== person.id);
+                        console.log(newPeople);
+                        setPeople(newPeople);
+                    }}>remove</buton>
                 </div>
             })}
         </article>

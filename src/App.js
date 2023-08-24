@@ -4,6 +4,7 @@ import UseEffect from './tutorial/useEffect';
 import ShowHide from './tutorial/showHide';
 import Forms from './tutorial/forms';
 import ContextAPI from './tutorial/ContextAPI';
+import Product from './tutorial/Product';
 
 function App() {
   return (
