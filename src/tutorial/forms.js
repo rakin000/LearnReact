@@ -16,9 +16,11 @@ const ControlledInput = () => {
         if( person.firstName && person.lastName && person.email && person.age ){
             const newpeople = [...people, person];
             setPeople(newpeople);
+            setPerson('','','','');
         }
         console.log("form submitted");
     }
+
     return (
         <article>
             <form className="form" onSubmit={handleSubmit}>
